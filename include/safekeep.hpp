@@ -94,8 +94,9 @@ class [[eosio::contract("safekeep")]] safekeep : public contract {
          uint64_t  cycle_time;
       };
       
-
-      // suported tokens
+      /**
+       * suported tokens
+       */
       struct [[eosio::table]] token {
          uint64_t                   id;
          name                       contract;
@@ -104,7 +105,9 @@ class [[eosio::contract("safekeep")]] safekeep : public contract {
          uint64_t        primary_key()const { return id; }
       };
 
-      // the keep records table
+      /**
+       * the keep records table
+       */
       struct [[eosio::table]] record {
          uint64_t                starttime;
          uint64_t                endtime;
